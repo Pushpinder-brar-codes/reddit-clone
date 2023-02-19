@@ -128,8 +128,9 @@ const CreateCommunityModel: React.FC<CreateCommunityModelProps> = ({
                   color="gray.700"
                   fontSize="1.2em"
                   pb="8px"
-                  children="r/"
-                />
+                >
+                  r/
+                </InputLeftElement>
                 <Input
                   value={communityName}
                   size="sm"
