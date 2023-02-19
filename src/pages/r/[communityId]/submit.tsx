@@ -22,12 +22,12 @@ const CreateCommmunityPostPage: NextPage = () => {
   const { loading } = useCommunityData();
 
   /**
-   * Not sure why not working
+   * Not sure why not workings
    * Attempting to redirect user if not authenticated
    */
   useEffect(() => {
-    if (!user && !loadingUser && communityStateValue.currentCommunity.id) {
-      router.push(`/r/${communityStateValue.currentCommunity.id}`);
+    if (!user && !loadingUser && communityStateValue.currentCommunity!.id) {
+      router.push(`/r/${communityStateValue.currentCommunity!.id}`);
     }
   }, [user, loadingUser, communityStateValue.currentCommunity]);
 
@@ -41,8 +41,8 @@ const CreateCommmunityPostPage: NextPage = () => {
         </Box>
         {user && (
           <NewPostForm
-            communityId={communityStateValue.currentCommunity.id}
-            communityImageURL={communityStateValue.currentCommunity.imageURL}
+            communityId={communityStateValue.currentCommunity!.id}
+            communityImageURL={communityStateValue.currentCommunity!.imageURL}
             user={user}
           />
         )}

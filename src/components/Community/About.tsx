@@ -79,7 +79,7 @@ const About: React.FC<AboutProps> = ({
         currentCommunity: {
           ...prev.currentCommunity,
           imageURL: downloadURL,
-        },
+        } as Community,
       }));
     } catch (error: any) {
       console.log("updateImage error", error.message);

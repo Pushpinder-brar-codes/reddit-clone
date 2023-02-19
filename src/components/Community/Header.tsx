@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ communityData }) => {
       <Box height="50%" bg="blue.400" />
       <Flex justifyContent="center" bg="white" flexGrow={1}>
         <Flex width="95%" maxWidth="860px">
-          {communityStateValue.currentCommunity.imageURL ? (
+          {communityStateValue.currentCommunity?.imageURL ? (
             <Image
               borderRadius="full"
               boxSize="66px"

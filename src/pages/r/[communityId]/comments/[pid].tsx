@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Post } from "../../../../atoms/postsAtom";
 import About from "../../../../components/Community/About";
 import PageContentLayout from "../../../../components/Layout/PageContent";
-import Comments from "../../../../components/Posts/comments";
+import Comments from "../../../../components/Posts/Comments";
 import PostLoader from "../../../../components/Posts/Loader";
 import PostItem from "../../../../components/Posts/PostItem";
 import { auth, firestore } from "../../../../firebase/clientApp";
@@ -100,7 +100,7 @@ const PostPage: React.FC<PostPageProps> = () => {
         <About
           onCreatePage={false}
           communityData={
-            communityStateValue.currentCommunity
+            communityStateValue.currentCommunity!
             // communityStateValue.visitedCommunities[community as string]
           }
           loading={loading}

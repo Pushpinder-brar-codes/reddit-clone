@@ -119,9 +119,7 @@ const CreateCommunityModel: React.FC<CreateCommunityModelProps> = ({
               <Text fontWeight={600} fontSize={15}>
                 Name
               </Text>
-              <Text fontSize={11} color="gray.500" mb="1.5rem">
-                Community names including Capitalization cannot be changed
-              </Text>
+              -{" "}
               <InputGroup mb="5px">
                 <InputLeftElement
                   pointerEvents="none"
