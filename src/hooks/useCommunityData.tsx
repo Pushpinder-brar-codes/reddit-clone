@@ -21,7 +21,7 @@ const useCommunityData = () => {
   const setAuthModalState = useSetRecoilState(authModalState);
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string>("");
 
   const [user] = useAuthState(auth);
   const router = useRouter();
@@ -103,7 +103,7 @@ const useCommunityData = () => {
       }));
     } catch (error: any) {
       console.log(error);
-      setError(error.message);
+      setError(error.message as string);
     }
     setLoading(false);
   };
