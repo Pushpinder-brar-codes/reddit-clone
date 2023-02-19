@@ -12,11 +12,9 @@ const SearchInput = ({ user }: Props) => {
   return (
     <Flex height="100%" flexGrow="1" maxW={!user ? "500px" : "initial"}>
       <InputGroup height="100%">
-        <InputLeftElement
-          height="100%"
-          pointerEvents="none"
-          children={<SearchIcon color="gray.300" />}
-        />
+        <InputLeftElement height="100%" pointerEvents="none">
+          <SearchIcon color="gray.300" />
+        </InputLeftElement>
         <Input
           height="100%"
           placeholder="Search Reddit"
