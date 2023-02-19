@@ -57,7 +57,7 @@ const useCommunityData = () => {
       }));
     } catch (error) {
       console.log(error);
-      setError(error.message);
+      setError(error.message as string);
     }
     setLoading(false);
   };
