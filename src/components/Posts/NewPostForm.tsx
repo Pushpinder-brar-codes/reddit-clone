@@ -53,11 +53,6 @@ const formTabs = [
   },
 ];
 
-export type TabItem = {
-  title: string;
-  icon: typeof Icon.arguments;
-};
-
 type NewPostFormProps = {
   communityId: string;
   communityImageURL?: string;
