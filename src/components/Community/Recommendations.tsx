@@ -41,7 +41,7 @@ const Recommendations: React.FC<RecommendationsProps> = () => {
 
       setCommunities(communities);
     } catch (error: any) {
-      console.log("getCommunityRecommendations error", error.message);
+      console.log("getCommunityRecommendations error");
     }
     setLoading(false);
   };

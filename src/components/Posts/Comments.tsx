@@ -103,7 +103,7 @@ const Comments: React.FC<CommentsProps> = ({
         postUpdateRequired: true,
       }));
     } catch (error: any) {
-      console.log("onCreateComment error", error.message);
+      console.log("onCreateComment error");
     }
     setCommentCreateLoading(false);
   };
@@ -135,7 +135,7 @@ const Comments: React.FC<CommentsProps> = ({
         setComments((prev) => prev.filter((item) => item.id !== comment.id));
         // return true;
       } catch (error: any) {
-        console.log("Error deletig comment", error.message);
+        console.log("Error deletig comment");
         // return false;
       }
       setDeleteLoading("");
@@ -157,7 +157,7 @@ const Comments: React.FC<CommentsProps> = ({
       }));
       setComments(comments as Comment[]);
     } catch (error: any) {
-      console.log("getPostComments error", error.message);
+      console.log("getPostComments error");
     }
     setCommentFetchLoading(false);
   };

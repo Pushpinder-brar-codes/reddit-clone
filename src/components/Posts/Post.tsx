@@ -242,7 +242,7 @@ const Posts: React.FC<PostsProps> = ({
         postUpdateRequired: false,
       }));
     } catch (error: any) {
-      console.log("getPosts error", error.message);
+      console.log("getPosts error");
     }
     setLoading(false);
   };

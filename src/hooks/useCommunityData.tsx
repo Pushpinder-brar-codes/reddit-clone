@@ -56,8 +56,10 @@ const useCommunityData = () => {
         mySnippets: snippets as CommunitySnippet[],
       }));
     } catch (error) {
-      console.log(error);
-      setError(error.message as string);
+      if (error instanceof Error) {
+        console.log(error);
+        setError(error.message as string);
+      }
     }
     setLoading(false);
   };
@@ -102,8 +104,10 @@ const useCommunityData = () => {
         mySnippets: [...prev.mySnippets, newSnippet],
       }));
     } catch (error: any) {
-      console.log(error);
-      setError(error.message as string);
+      if (error instanceof Error) {
+        console.log(error);
+        setError(error.message as string);
+      }
     }
     setLoading(false);
   };
@@ -125,7 +129,9 @@ const useCommunityData = () => {
         ),
       }));
     } catch (error) {
-      setError(error.message);
+      if (error instanceof Error) {
+        setError(error.message);
+      }
     }
     setLoading(false);
   };

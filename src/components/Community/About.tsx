@@ -82,7 +82,7 @@ const About: React.FC<AboutProps> = ({
         } as Community,
       }));
     } catch (error: any) {
-      console.log("updateImage error", error.message);
+      console.log("updateImage error");
     }
     // April 24 - removed reload
     // window.location.reload();

@@ -91,8 +91,10 @@ const CreateCommunityModel: React.FC<CreateCommunityModelProps> = ({
 
       setError("");
     } catch (error: any) {
-      console.log("handleCreateCommunity error ", error);
-      setError(error.message);
+      console.log("handleCreateCommunity error ");
+      if (error instanceof Error) {
+        setError(error.message);
+      }
     }
 
     setLoading(false);
