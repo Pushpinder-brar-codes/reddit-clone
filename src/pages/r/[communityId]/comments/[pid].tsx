@@ -81,7 +81,7 @@ const PostPage: React.FC<PostPageProps> = () => {
                     postStateValue.selectedPost
                       ? postStateValue.postVotes.find(
                           (item) =>
-                            item.postId === postStateValue.selectedPost!.id
+                            item.postId === postStateValue.selectedPost?.id
                         )?.voteValue
                       : 0
                   }
