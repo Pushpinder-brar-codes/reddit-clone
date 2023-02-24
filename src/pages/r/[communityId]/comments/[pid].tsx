@@ -78,9 +78,12 @@ const PostPage: React.FC<PostPageProps> = () => {
                   onVote={onVote}
                   onDeletePost={onDeletePost}
                   userVoteValue={
-                    postStateValue.postVotes.find(
-                      (item) => item.postId === postStateValue.selectedPost?.id
-                    )?.voteValue
+                    postStateValue.selectedPost
+                      ? postStateValue.postVotes.find(
+                          (item) =>
+                            item.postId === postStateValue.selectedPost!.id
+                        )?.voteValue
+                      : 0
                   }
                   userIsCreator={
                     user?.uid === postStateValue.selectedPost.creatorId
