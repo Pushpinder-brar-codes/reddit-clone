@@ -39,7 +39,7 @@ const PostPage: React.FC<PostPageProps> = () => {
       const postDoc = await getDoc(postDocRef);
       setPostStateValue((prev) => ({
         ...prev,
-        selectedPost: { id: postDoc.id, ...postDoc.data() } as Post,
+        selectedPost: { id: postDoc?.id, ...postDoc.data() } as Post,
       }));
       // setPostStateValue((prev) => ({
       //   ...prev,
